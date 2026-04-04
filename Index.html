@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singles Supper Club — Unnamed x Almost Lovers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cormorant+Upright:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #c8d9e8;
+    --ink: #111110;
+    --ink-light: #2a2a28;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --script: 'Great Vibes', cursive;
+    --tracking: 0.18em;
+  }
+
+  html, body {
+    min-height: 100%;
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .presenter {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 0.7rem;
+    letter-spacing: var(--tracking);
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 1.8rem;
+    text-align: center;
+  }
+
+  .title-block {
+    text-align: center;
+    margin-bottom: 2.2rem;
+    line-height: 0.88;
+  }
+
+  .title-block .script {
+    font-family: var(--script);
+    font-size: clamp(5rem, 22vw, 9rem);
+    color: var(--ink);
+    display: block;
+    line-height: 1.05;
+  }
+
+  .tagline {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 340px;
+    margin: 0 auto 2.8rem;
+  }
+
+  .divider {
+    width: 1px;
+    height: 40px;
+    background: var(--ink);
+    opacity: 0.25;
+    margin: 0 auto 2.8rem;
+  }
+
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    width: 100%;
+    max-width: 520px;
+    margin-bottom: 2.8rem;
+  }
+
+  .meta-cell {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(0.78rem, 2.2vw, 0.88rem);
+    letter-spacing: 0.06em;
+    line-height: 1.75;
+    color: var(--ink);
+  }
+
+  .meta-cell:last-child {
+    text-align: right;
+  }
+
+  .venue-block {
+    text-align: center;
+    font-family: var(--serif);
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    font-size: clamp(0.82rem, 2.3vw, 0.95rem);
+    line-height: 2;
+    margin-bottom: 2.8rem;
+    color: var(--ink);
+  }
+
+  .postcode {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1rem, 6vw, 3.5rem);
+    font-size: clamp(0.82rem, 2.3vw, 0.95rem);
+    letter-spacing: var(--tracking);
+    font-weight: 300;
+  }
+
+  .divider-full {
+    width: 100%;
+    max-width: 520px;
+    height: 1px;
+    background: var(--ink);
+    opacity: 0.15;
+    margin: 2.4rem 0;
+  }
+
+  .tickets-label {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 0.68rem;
+    letter-spacing: var(--tracking);
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0.6;
+    text-align: center;
+    margin-bottom: 1.6rem;
+  }
+
+  .ticket-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 1.1rem 1rem;
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 0.75rem;
+    letter-spacing: var(--tracking);
+    text-transform: uppercase;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    opacity: 0.82;
+    transform: translateY(-1px);
+  }
+
+  .btn:active {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+
+  .btn-label {
+    display: block;
+    font-family: var(--script);
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    text-transform: none;
+    margin-bottom: 0.15rem;
+    line-height: 1.2;
+  }
+
+  .btn-sub {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-top: 0.4rem;
+  }
+
+  .btn-male {
+    background: var(--ink);
+    color: var(--bg);
+    border: 1px solid var(--ink);
+  }
+
+  .btn-male .btn-label {
+    color: var(--bg);
+  }
+
+  .btn-female {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+  }
+
+  .footer-note {
+    margin-top: 2.4rem;
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0.45;
+    text-align: center;
+  }
+
+  @media (max-width: 400px) {
+    .ticket-buttons {
+      grid-template-columns: 1fr;
+      max-width: 280px;
+    }
+    .meta-grid {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      text-align: center;
+    }
+    .meta-cell:last-child {
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <p class="presenter">Unnamed Supper Club &times; Almost Lovers Present</p>
+
+  <div class="title-block">
+    <span class="script">Singles</span>
+    <span class="script">Supper Club</span>
+  </div>
+
+  <p class="tagline">
+    It&rsquo;s love at first bite.<br>
+    Join us for a very sexy, singles-only supper club<br>
+    &amp; feel a spark over food.
+  </p>
+
+  <div class="divider"></div>
+
+  <div class="meta-grid">
+    <div class="meta-cell">
+      Saturday,<br>
+      9th<br>
+      May, 2026
+    </div>
+    <div class="meta-cell">
+      Straight,<br>
+      Ages 25&ndash;35<br>
+      Singles only
+    </div>
+  </div>
+
+  <div class="venue-block">
+    <div>D&uuml;kkan.</div>
+    <div>227&ndash;229 Hoxton Street.</div>
+    <div class="postcode">
+      <span>Hoxton</span>
+      <span>London</span>
+    </div>
+    <div class="postcode" style="margin-top:0.2rem;">
+      <span>N</span><span>1</span><span>5</span><span>L</span><span>G</span>
+    </div>
+  </div>
+
+  <div class="divider-full"></div>
+
+  <p class="tickets-label">Reserve your seat</p>
+
+  <div class="ticket-buttons">
+    <a href="https://book.stripe.com/eVq5kD0lu1vx9843ELeQM08" class="btn btn-male" target="_blank" rel="noopener">
+      <span class="btn-label">Male</span>
+      <span class="btn-sub">Book ticket &rarr;</span>
+    </a>
+    <a href="https://book.stripe.com/4gMbJ14BKcab1FC3ELeQM07" class="btn btn-female" target="_blank" rel="noopener">
+      <span class="btn-label">Female</span>
+      <span class="btn-sub">Book ticket &rarr;</span>
+    </a>
+  </div>
+
+  <p class="footer-note">Tickets are refundable up to 2 weeks before event &middot; Singles only</p>
+
+</body>
+</html>
