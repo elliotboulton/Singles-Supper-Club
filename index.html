@@ -77,22 +77,22 @@
     height: 40px;
     background: var(--ink);
     opacity: 0.25;
-    margin: 0 auto 2.8rem;
+    margin: 0 auto 1rem;
   }
 
   .meta-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    width: 100%;
-    max-width: 520px;
-    margin-bottom: 2.8rem;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  width: 100%;
+  max-width: 520px;
+  margin-bottom: 0.2rem;
+}
 
   .meta-cell {
     font-family: var(--serif);
     font-weight: 300;
-    font-size: clamp(0.78rem, 2.2vw, 0.88rem);
+    font-size: clamp(1rem, 2.2vw, 1rem);
     letter-spacing: 0.06em;
     line-height: 1.75;
     color: var(--ink);
@@ -109,7 +109,7 @@
     letter-spacing: 0.12em;
     font-size: clamp(1rem, 2.3vw, 1rem);
     line-height: 2;
-    margin-bottom: 2.8rem;
+    margin-bottom: 0.2rem;
     color: var(--ink);
   }
 
@@ -210,6 +210,54 @@
     border: 1px solid var(--ink);
   }
 
+  .event-details {
+    width: 100%;
+    max-width: 520px;
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(0.9rem, 2.4vw, 1rem);
+    line-height: 1.85;
+    color: var(--ink);
+  }
+
+  .event-details .intro {
+    font-style: italic;
+    letter-spacing: 0.04em;
+    margin-bottom: 1.8rem;
+    text-align: left;
+  }
+
+  .event-details .section-heading {
+    font-family: var(--script);
+    font-size: 1.6rem;
+    font-style: normal;
+    letter-spacing: 0;
+    margin: 0.5rem 0 0.6rem;
+    display: block;
+  }
+
+  .event-details .item {
+    margin-bottom: 1.1rem;
+    padding-left: 0.2rem;
+  }
+
+  .event-details .item-icon {
+    display: inline-block;
+    margin-right: 0.3rem;
+  }
+
+  .event-details .item-title {
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+
+  .event-details .closing {
+    font-style: italic;
+    letter-spacing: 0.04em;
+    margin-top: 1.8rem;
+    text-align: center;
+  }
+
   .footer-note {
     margin-top: 2.4rem;
     font-family: var(--serif);
@@ -223,19 +271,15 @@
   }
 
   @media (max-width: 400px) {
-    .ticket-buttons {
-      grid-template-columns: 1fr;
-      max-width: 280px;
-    }
-    .meta-grid {
-      grid-template-columns: 1fr;
-      gap: 1.2rem;
-      text-align: center;
-    }
-    .meta-cell:last-child {
-      text-align: center;
-    }
+  .meta-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    text-align: center;
   }
+  .meta-cell:last-child {
+    text-align: center;
+  }
+}
 </style>
 </head>
 <body>
@@ -270,33 +314,71 @@
 
    <div class="divider-full"></div>
 
-  <div class="meta-grid">
+   <div class="meta-grid">
     <div class="meta-cell">
       Saturday,<br>
       9th<br>
       May, 2026
     </div>
+    <div class="meta-cell" style="text-align: center;">
+        D&uuml;kkan.<br>
+        227&ndash;229 Hoxton Street.<br>
+        Hoxton, London N15LG
+    </div>
     <div class="meta-cell">
-      Straight,<br>
-      Ages 25&ndash;35<br>
-      Singles only
+        Straight,<br>
+        Ages 25&ndash;35<br>
+        Singles only
     </div>
   </div>
 
-  <div class="venue-block">
-    <div>D&uuml;kkan.</div>
-    <div>227&ndash;229 Hoxton Street.</div>
-    <div class="postcode">
-      <span>Hoxton</span>
-      <span>London</span>
-    </div>
-    <div class="postcode" style="margin-top:0.2rem;">
-      <span>N</span><span>1</span><span>5</span><span>L</span><span>G</span>
-    </div>
-  </div>
+
 
   <div class="divider-full"></div>
 
+  <div class="event-details">
+
+    <span class="section-heading">Event Details</span>
+
+    <p class="intro">Dating apps not doing it for you anymore? we get it — so we&rsquo;ve teamed up to create something better. Unnamed Supper Club &times; Almost Lovers are hosting a singles-only supper club designed for meeting people properly: over great food, good wine, and actual conversation ✨</p>
+
+    <p class="item">On May 9th at D&uuml;kkan, Hoxton — expect 30 sexy singles, a standout 5-course menu, and the chance to meet new people whilst getting your flirt on 💋</p>
+
+    <span class="section-heading">What to expect</span>
+
+    <p class="item"><span class="item-icon">🍸</span><span class="item-title">6:00pm — arrival &amp; mingling</span><br>
+    start with a welcome drink to cure those first-date nerves, meet everyone and settle in before dinner.</p>
+
+    <p class="item"><span class="item-icon">🍽️</span><span class="item-title">A 5-course supper club menu</span> crafted by Unnamed Supper Club — seasonal, thoughtful, and very sexy dishes designed to be enjoyed slowly, with plenty to talk about. this includes our signature 72h focaccia (and yes, it&rsquo;s good).<br><br>
+    you&rsquo;ll change seats between some courses, so you naturally meet different people throughout the night. no awkward speed rounds, just easy, flowing conversation (and drinks).</p>
+
+    <p class="item"><span class="item-icon">💌</span><span class="item-title">Conversation &amp; detail-swapping cards</span> to help things along and make reconnecting with your potential new boo/s simple.</p>
+
+    <p class="item"><span class="item-icon">🥂</span><span class="item-title">post-dinner drinks &amp; mingling</span><br>
+    once dinner wraps, the structure fades — stay for drinks and spend more time with the people you clicked with.</p>
+
+    <p class="item"><span class="item-icon">🌙</span><span class="item-title">until 12:00am</span></p>
+
+    <span class="section-heading">The vibe</span>
+    <p class="item">Relaxed, social, and a little bit flirty. this event will be built around real-life connection. no swiping, no awkward interactions.</p>
+
+    <span class="section-heading">Who it&rsquo;s for</span>
+    <p class="item">Straight singles aged 25&ndash;35. ID checked at the door.</p>
+
+    <span class="section-heading">Tickets</span>
+    <p class="item">&pound;65 includes a welcome drink + a delicious, full 5-course menu. singles only.</p>
+
+    <span class="section-heading">Venue</span>
+    <p class="item">D&uuml;kkan, Hoxton — an intimate setting for a night that&rsquo;s all about good food and new connections. think moody lighting, romantic table settings and a flirty, fun vibe.</p>
+
+    <span class="section-heading">Notes</span>
+    <p class="item">We will be capturing content on the night (nothing embarrassing or intrusive). let us know if you&rsquo;d prefer not to be included.</p>
+
+    <p class="closing">So give your thumbs a break and join us for a sexy supper club that&rsquo;s not to be missed&hellip; you might meet someone worth seeing again 💌</p>
+
+  </div>
+
+  <div class="divider-full"></div>
 
   <p class="footer-note">Tickets are refundable up to 2 weeks before event &middot; Singles only</p>
 
