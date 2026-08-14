@@ -80,7 +80,7 @@
   .hero-title .line2 {
   font-family: var(--script);
   font-style: italic;
-  font-weight: 150;
+  font-weight: 200;
   color: var(--slate);
   font-size: clamp(3rem, 11vw, 6.2rem);
   line-height: 1;
@@ -256,6 +256,22 @@
     font-size: 1.1rem;
   }
 
+ .map-embed {
+  margin-top: 1.4rem;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
   /* ---------- FOOTER ---------- */
 
   .footer {
@@ -320,7 +336,7 @@
   <!-- DETAILS -->
   <section class="details">
 
-    <p class="intro">Join us for the next chapter of Unnamed Supper Club — an evening built around seasonal produce, Mediterranean flavours, and good company. We would love for you to join us!</p>
+    <p class="intro">Join us for the next chapter of Unnamed Supper Club — an evening built around seasonal produce, Mediterranean flavours, and good company.</p>
 
     <div class="section-block">
       <span class="section-heading">The Menu</span>
@@ -333,9 +349,9 @@
     <div class="section-block">
       <span class="section-heading">The Evening</span>
       <ul class="timeline">
-        <li><span class="time">7:00 pm</span><span>Arrival, welcome cocktail &amp; mingling</span></li>
-        <li><span class="time">10:00&ndash;10:30 pm</span><span>Food service wraps</span></li>
-        <li><span class="time">Until Midnight</span><span>Drinks &amp; conversation as the night winds down</span></li>
+        <li><span class="time">19:00</span><span>Arrival, welcome cocktail &amp; mingling</span></li>
+        <li><span class="time">22:30</span><span>Food service wraps, drinks available until close</span></li>
+        <li><span class="time">00:00</span><span>Close - continue your night however you want!</span></li>
       </ul>
     </div>
 
@@ -355,18 +371,29 @@
 
     <div class="divider"></div>
 
-    <div class="section-block">
-      <span class="section-heading">The Venue</span>
-      <p class="venue-name">D&uuml;kkan, Hoxton</p>
-      <p>227 Hoxton Street, London N1 5LG</p>
-    </div>
+<div class="section-block">
+  <span class="section-heading">The Venue</span>
+  <p class="venue-name">D&uuml;kkan, Hoxton</p>
+  <p>227 Hoxton Street, London N1 5LG</p>
+
+  <div class="map-embed">
+    <iframe
+      src="https://maps.google.com/maps?q=D%C3%BCkkan%2C%20227%20Hoxton%20Street%2C%20London%20N1%205LG&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="300"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
 
   </section>
 
   <!-- FOOTER CTA -->
   <footer class="footer">
     <a href="https://book.stripe.com/3cI28rb087TVgAw4IPeQM0a" class="btn-ticket-alt" target="_blank" rel="noopener">Reserve Your Seat</a>
-    <p class="footer-note">&pound;55 per seat &middot; early bird pricing available &middot; tickets are limited</p>
    <p class="footer-note" style="margin-top: 0.4rem; opacity: 0.5;">Tickets are refundable up to 2 weeks before the event</p>
   </footer>
 
